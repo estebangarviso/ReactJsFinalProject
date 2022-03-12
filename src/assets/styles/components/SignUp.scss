@@ -1,0 +1,14 @@
+@import '../App.scss';
+
+.sign-up {
+  width: 100%;
+  .title {
+    margin: 10px 0;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+}

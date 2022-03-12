@@ -1,0 +1,24 @@
+@mixin flexColCenCen() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexBetCen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexCenCen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexStaSta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

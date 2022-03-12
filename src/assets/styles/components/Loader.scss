@@ -1,0 +1,9 @@
+@import '../App.scss';
+
+.loader {
+  @include flexColCenCen;
+  .loader-icon {
+    width: 3rem;
+    height: auto;
+  }
+}

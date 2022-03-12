@@ -1,0 +1,69 @@
+@import '../App.scss';
+
+.custom-button {
+  min-width: 165px;
+  width: auto;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  background-color: $dark;
+  color: $light;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $light;
+    color: $dark;
+    border: 1px solid $dark;
+  }
+
+  &.google-sign-in {
+    background-color: #4285f4;
+    color: white;
+
+    &:hover {
+      background-color: #357ae8;
+      border: none;
+    }
+  }
+
+  &.facebook-sign-in {
+    background-color: #3b5998;
+    color: white;
+
+    &:hover {
+      background-color: #2d4373;
+      border: none;
+    }
+  }
+
+  &.twitter-sign-in {
+    background-color: #55acee;
+    color: white;
+
+    &:hover {
+      background-color: #2795e9;
+      border: none;
+    }
+  }
+
+  &.github-sign-in {
+    background-color: #333;
+    color: white;
+
+    &:hover {
+      background-color: #222;
+      border: none;
+    }
+  }
+
+  .custom-button-icon {
+    margin-right: 10px;
+    width: auto;
+    height: 2em;
+  }
+}

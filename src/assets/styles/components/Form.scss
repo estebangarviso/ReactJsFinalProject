@@ -1,0 +1,8 @@
+@import '../App.scss';
+
+.input-group {
+  margin-bottom: 1rem;
+  .floating-label {
+    flex-grow: 1;
+  }
+}

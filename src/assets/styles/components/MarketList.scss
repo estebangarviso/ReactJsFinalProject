@@ -1,0 +1,6 @@
+@import '../App.scss';
+
+.market-list {
+  @include flexCenCen;
+  flex: wrap;
+}

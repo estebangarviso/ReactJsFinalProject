@@ -1,0 +1,160 @@
+{
+  "name": "reactjsfinalproject",
+  "version": "1.0.0",
+  "description": "An Escalab Academy ReactJS Final Project for certification",
+  "scripts": {
+    "start": "webpack --config webpack/webpack.dev.ts --progress --profile",
+    "build": "webpack --config webpack/webpack.prod.ts --progress --profile",
+    "dev-server": "npx webpack serve --config webpack/webpack.dev.ts --progress --profile",
+    "lint": "npx eslint src/**/*.js src/**/*.jsx src/**/*.ts src/**/*.tsx",
+    "lint-fix": "npx eslint src/**/*.js src/**/*.jsx src/**/*.ts src/**/*.tsx --fix"
+  },
+  "main": "src/index.tsx",
+  "repository": "https://github.com/estebangarviso/ReactJsFinalProject.git",
+  "homepage": "https://wololo.vercel.app",
+  "author": {
+    "name": "Esteban Garviso",
+    "url": "https://github.com/estebangarviso",
+    "email": "e.garvisovenegas@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@formspark/use-formspark": "^0.1.38",
+    "@hookform/error-message": "^2.0.0",
+    "@hookform/resolvers": "^2.8.8",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "axios": "0.19.0",
+    "axios-retry": "^3.2.4",
+    "bootstrap": "^5.1.3",
+    "cryptocurrency-icons": "^0.18.0",
+    "firebase": "^9.5.0",
+    "i18next": "^21.5.4",
+    "i18next-browser-languagedetector": "^6.1.3",
+    "i18next-http-backend": "^1.3.2",
+    "install": "^0.13.0",
+    "material-ui-flags": "^1.2.4",
+    "node-binance-api": "^0.13.1",
+    "process": "^0.11.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-google-recaptcha": "^2.1.0",
+    "react-helmet": "^6.1.0",
+    "react-hook-form": "^7.27.1",
+    "react-i18next": "^11.15.5",
+    "react-redux": "7.1.3",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "^4.0.3",
+    "redux": "4.0.4",
+    "styled-components": "^5.3.3",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@babel/runtime": "^7.17.2",
+    "@types/dotenv-webpack": "^7.0.3",
+    "@types/firebase": "^3.2.1",
+    "@types/i18next": "^13.0.0",
+    "@types/material-ui": "^0.21.12",
+    "@types/mini-css-extract-plugin": "^2.4.0",
+    "@types/node": "^16.11.13",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-google-recaptcha": "^2.1.5",
+    "@types/react-helmet": "^6.1.4",
+    "@types/react-redux": "^7.1.23",
+    "@types/react-router-dom": "^5.3.2",
+    "@types/redux-logger": "^3.0.9",
+    "@types/styled-components": "^5.1.24",
+    "@types/typescript": "^2.0.0",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-dev-server": "^4.5.0",
+    "@types/webpack-merge": "^5.0.0",
+    "@types/ws": "^8.5.3",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
+    "autoprefixer": "^9",
+    "babel-loader": "^8.2.3",
+    "copy-webpack-plugin": "^10.2.4",
+    "core-js": "^3.21.1",
+    "css-loader": "^6.5.1",
+    "css-minimizer-webpack-plugin": "^3.2.0",
+    "dart-sass": "^1.25.0",
+    "dotenv-webpack": "^7.0.3",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.3",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "favicons-webpack-plugin": "^5.0.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "http-proxy-middleware": "^2.0.3",
+    "image-webpack-loader": "^8.1.0",
+    "mini-css-extract-plugin": "^2.4.5",
+    "node-sass": "^7.0.1",
+    "postcss-loader": "^6.2.1",
+    "prettier": "^2.5.0",
+    "purgecss-webpack-plugin": "^4.1.3",
+    "react-svg-loader": "^3.0.3",
+    "redux-logger": "^3.0.6",
+    "resolve-url-loader": "^4.0.0",
+    "sass-loader": "^12.3.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.8",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
+    "typescript": "^4.5.2",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "browser": {
+    "fs": false
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "react-hooks"
+    ],
+    "extends": [
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/prop-types": "off"
+    },
+    "settings": {
+      "react": {
+        "pragma": "React",
+        "version": "detect"
+      }
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

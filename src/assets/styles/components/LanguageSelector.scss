@@ -1,0 +1,13 @@
+@import '../App.scss';
+
+.header-language-selector {
+  .icon-flag {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+  }
+}

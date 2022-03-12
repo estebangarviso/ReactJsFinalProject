@@ -1,0 +1,24 @@
+@import './Variables.scss';
+@import './Mixins.scss';
+// Bootstrap SCSS
+@import '~bootstrap/scss/bootstrap.scss';
+
+// Custom CSS
+*,
+*::before,
+*::after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @include transition($transition-fade);
+  .theme-light {
+    background-color: $light;
+    color: $dark;
+  }
+  .theme-dark {
+    background-color: $dark;
+    color: $light;
+  }
+}

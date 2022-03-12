@@ -1,0 +1,110 @@
+@import '../App.scss';
+
+#header {
+  &.theme-light {
+    border-bottom: 1px solid shade-color($light, 20%);
+  }
+
+  &.theme-dark {
+    border-bottom: 1px solid tint-color($dark, 20%);
+  }
+  .logo {
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    .logo-img {
+      width: auto;
+      height: 5rem;
+      margin-right: 0.5rem;
+      &:hover {
+        fill: shade-color($secondary, 20%);
+      }
+    }
+  }
+  .navbar {
+    padding: 0;
+  }
+  .navbar-toggler {
+    &:active {
+      outline: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .navbar-custom {
+    .navbar-toggler-icon {
+      width: 24px;
+      height: 17px;
+      background-image: none;
+      position: relative;
+      transition: all 300ms linear;
+      border-bottom: solid 2px $dark;
+      &:after {
+        width: 24px;
+        position: absolute;
+        height: 2px;
+        background-color: $dark;
+        top: 0;
+        left: 0;
+        content: '';
+        z-index: 2;
+        transition: all 300ms linear;
+        top: 8px;
+      }
+      &:before {
+        width: 24px;
+        position: absolute;
+        height: 2px;
+        background-color: $dark;
+        top: 0;
+        left: 0;
+        content: '';
+        z-index: 2;
+        transition: all 300ms linear;
+      }
+    }
+  }
+  .navbar-toggler[aria-expanded='true'] {
+    .navbar-toggler-icon {
+      &:after {
+        transform: rotate(45deg);
+      }
+      &:before {
+        transform: translateY(8px) rotate(-45deg);
+      }
+      border-color: transparent;
+    }
+  }
+  .nav-link {
+    color: $gray-600;
+    font-weight: 500;
+    transition: all 200ms linear;
+    padding: 5px 0 !important;
+    font-size: $font-size-lg;
+  }
+  .nav-item {
+    padding: 0 0.25rem;
+    &:hover {
+      .nav-link {
+        color: $gray-800;
+      }
+    }
+    &:after {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      content: '';
+      background-color: shade-color($secondary, 20%);
+      opacity: 0;
+      transition: all 200ms linear;
+    }
+  }
+  .nav-item.active {
+    .nav-link {
+      color: shade-color($secondary, 20%);
+    }
+  }
+}
