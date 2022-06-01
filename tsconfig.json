@@ -53,7 +53,8 @@
     "paths": {
       "@/*": ["*", "./src/*"],
       "@styles/*": ["./src/assets/styles/*"],
-      "@img/*": ["./src/assets/img/*"]
+      "@img/*": ["./src/assets/img/*"],
+      "@helpers/*": ["./src/helpers/*"]
     } /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */,
     // "rootDirs": [],                              /* List of root folders whose combined content represents the structure of the project at runtime. */
     "typeRoots": [

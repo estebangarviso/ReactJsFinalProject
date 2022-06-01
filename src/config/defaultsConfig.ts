@@ -20,6 +20,7 @@ export const defaults = {
     },
   },
 };
+export const passwordMinLength = 8;
 export const themeNames = ['light', 'dark'];
 export const defaultlang = 'en';
 export const supportedlangs = ['en', 'es'];

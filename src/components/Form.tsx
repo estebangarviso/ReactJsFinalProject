@@ -23,7 +23,7 @@ export const Input: React.FunctionComponent<InputProps> = ({
     <ErrorMessage
       name={otherProps.name as string}
       errors={errors}
-      render={(messages) =>
+      render={({ messages }) =>
         messages && (
           <div className='invalid-feedback'>
             <ul>
@@ -55,7 +55,7 @@ export const TextArea: React.FunctionComponent<TextAreaProps> = ({
     <ErrorMessage
       name={otherProps.name as string}
       errors={errors}
-      render={(messages) =>
+      render={({ messages }) =>
         messages && (
           <div className='invalid-feedback'>
             <ul>

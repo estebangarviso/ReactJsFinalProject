@@ -31,6 +31,8 @@
   "Passwords don't match": "Passwords don't match",
   "Message is required": "Message is required",
   "Email is not valid": "Email is not valid",
-  "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character": "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character",
-  "There was an error, please contact support": "There was an error, please contact support"
+  "Must have at least one uppercase, one lowercase, one number and one special case character": "Must have at least one uppercase, one lowercase, one number and one special case character",
+  "There was an error, please contact support": "There was an error, please contact support",
+  "Email is already in use": "Email is already in use",
+  "Password must be at ${min} char long": "Password must be at ${min} char long"
 }

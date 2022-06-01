@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 import { ISignUpFormFields } from '@/interfaces';
 import { useDispatch } from 'react-redux';
 import { registerUser } from '@/actions/user_actions';
+import { passwordMinLength } from '@/config/defaultsConfig';
 
 yup.addMethod(yup.string, 'emailExist', function (message) {
   return this.test('emailExist', message, async function (value) {
@@ -57,10 +58,16 @@ const SignUp: React.FunctionComponent<ModalChildrenProps> = ({
         .matches(
           /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
           t(
-            'Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character'
+            'One Uppercase, One Lowercase, One Number and one special case Character'
           )
         )
-        .min(8, t('Password must be at 8 char long')),
+        .min(
+          passwordMinLength,
+          t('Password must be at ${min} char long').replace(
+            '${min}',
+            passwordMinLength.toString()
+          )
+        ),
       displayName: yup.string().required(t('Display name is required')),
       confirmPassword: yup
         .string()
@@ -71,10 +78,11 @@ const SignUp: React.FunctionComponent<ModalChildrenProps> = ({
     .required();
 
   const { register, handleSubmit, setValue, formState } =
-      useForm<ISignUpFormFields>({
-        resolver: yupResolver(schema),
-      }),
-    errors = formState.errors;
+    useForm<ISignUpFormFields>({
+      resolver: yupResolver(schema),
+      criteriaMode: 'all',
+    });
+  const errors = formState.errors;
 
   const onSubmit = async (data) => {
     let dataToSubmit = {

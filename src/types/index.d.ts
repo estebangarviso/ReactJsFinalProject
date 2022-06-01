@@ -91,7 +91,7 @@ type DropDownProps = {
 };
 type ErrorProps = {
   img?: string;
-  title?: string;
+  title?: string | JSX.Element;
   action: () => void;
 };
 type FormFieldsProps = {

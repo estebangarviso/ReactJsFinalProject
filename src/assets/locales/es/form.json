@@ -31,6 +31,8 @@
   "Passwords don't match": "Las contraseñas no coinciden",
   "Message is required": "El mensaje es requerido",
   "Email is not valid": "El correo electrónico no es válido",
-  "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character": "Debe contener 8 caracteres, una letra mayúscula, una letra minúscula, un número y un carácter especial",
-  "There was an error, please contact support": "Hubo un error, por favor contacte con soporte"
+  "Must have at least one uppercase, one lowercase, one number and one special case character": "Debe tener al menos una mayúscula, una minúscula, un número y un carácter especial",
+  "There was an error, please contact support": "Hubo un error, por favor contacte con soporte",
+  "Email is already in use": "El correo electrónico ya está en uso",
+  "Password must be at ${min} char long": "La contraseña debe tener al menos ${min} caracteres"
 }

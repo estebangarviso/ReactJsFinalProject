@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { loginUser } from '@/src/actions/user_actions';
+import { loginUser } from '@/actions/user_actions';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -37,10 +37,11 @@ const SignIn: React.FunctionComponent<ModalChildrenProps> = ({
     .required();
 
   const { register, handleSubmit, setError, formState, setValue } =
-      useForm<ISignInFormFields>({
-        resolver: yupResolver(schema),
-      }),
-    errors = formState.errors;
+    useForm<ISignInFormFields>({
+      resolver: yupResolver(schema),
+      mode: 'all',
+    });
+  const errors = formState.errors;
 
   const onSubmit = (data: ISignInFormFields) => {
     let dataToSubmit = {

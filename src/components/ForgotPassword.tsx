@@ -24,10 +24,11 @@ const ForgotPassword: React.FunctionComponent<ModalChildrenProps> = ({
     })
     .required();
   const { register, handleSubmit, setError, setValue, formState } =
-      useForm<IForgotPasswordFormFields>({
-        resolver: yupResolver(schema),
-      }),
-    errors = formState.errors;
+    useForm<IForgotPasswordFormFields>({
+      resolver: yupResolver(schema),
+      mode: 'all',
+    });
+  const errors = formState.errors;
 
   const onSubmit = (data: IForgotPasswordFormFields) => {
     auth

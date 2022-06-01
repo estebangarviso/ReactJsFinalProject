@@ -28,10 +28,11 @@ const ContactForm: React.FunctionComponent = (): JSX.Element => {
   });
 
   const { register, handleSubmit, formState, setValue } =
-      useForm<IContactFormFields>({
-        resolver: yupResolver(schema),
-      }),
-    errors = formState.errors;
+    useForm<IContactFormFields>({
+      resolver: yupResolver(schema),
+      mode: 'all',
+    });
+  const errors = formState.errors;
 
   const onSubmit = async (dataToSubmit: IContactFormFields) => {
     setIsloading(true);

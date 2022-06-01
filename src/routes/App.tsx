@@ -7,7 +7,7 @@ import Profile from '@/containers/Profile';
 import Login from '@/containers/Login';
 import Layout from '@/components/Layout';
 import Loader from '@/components/Loader';
-import { errorBoundary } from '@/helpers/errorBoundry';
+import errorBoundary from '@/helpers/errorBoundry';
 import '@styles/App.scss';
 import { connect } from 'react-redux';
 import { authUser } from '@/actions/user_actions';
@@ -25,7 +25,7 @@ const App: React.FunctionComponent = (): JSX.Element => {
   const joinedLangs = supportedlangs
     .filter((lang) => lang !== defaultlang)
     .join('|');
-  const lang = i18n.language !== defaultlang ? `/:lang(${joinedLangs})` : '';
+  const lang = i18n.language === defaultlang ? '' : i18n.language;
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Helmet defaultTitle={title} titleTemplate={`%s | ${site_name}`}>
@@ -48,7 +48,6 @@ const App: React.FunctionComponent = (): JSX.Element => {
         <Suspense fallback={<Loader />}>
           <Switch>
             <Route exact path={'/'} component={Market} />
-            <Route exact path={'/es'} component={Market} />
             <Route path={`${lang}${t('/contact')}`} component={Contact} />
             <Route path={`${lang}${t('/profile')}`} component={Profile} />
             <Route path={`${lang}${t('/login')}`} component={Login} />
